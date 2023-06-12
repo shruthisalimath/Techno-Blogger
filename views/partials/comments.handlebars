@@ -1,0 +1,13 @@
+<div class="comments">
+  {{#each this}}
+  <section class="comment">
+    <div class="meta">
+      Created by: {{user.username}} Posted on: {{format_date created_at}}
+    </div>
+    <div class="text">
+      {{feedback}}
+    </div>
+  </section>
+  {{/each}}
+</div>
+Footer

@@ -1,0 +1,16 @@
+<ol class="post-list">
+    <!-- Loop over each object in the posts array -->
+  {{#each posts as |post| }}
+  <li>
+    <article class="post">
+      <div class="title">
+        <a href="/post/{{id}}">{{title}}</a>
+      </div>
+      <span>{{{content}}}</span>
+      <div class="meta" style="font-size: small;">
+        Posted on {{format_date created_at}} Created by: {{user.username}}
+      </div>
+    </article>
+  </li>
+  {{/each}}
+</ol>

@@ -19,7 +19,9 @@
   }
   
   .logo{
-    margin-left: 700px;
+    margin-left: 400px;
+    font-size: 40px;
+    color:darkmagenta;
   }
 
   a:hover {

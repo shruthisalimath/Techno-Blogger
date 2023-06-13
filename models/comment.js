@@ -18,7 +18,7 @@ comment.init(
             autoIncrement: true
         },
         // define a comment text column
-        feedbck: {
+        feedback: {
             type: DataTypes.STRING,
             allowNull: false,
             validate: {
@@ -41,6 +41,11 @@ comment.init(
                 model: 'post',
                 key: 'id'
             }
+        },
+        created_at: {
+            type: DataTypes.DATE,
+            allowNull: false,
+            defaultValue: DataTypes.NOW,
         }
     },
     {

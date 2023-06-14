@@ -7,12 +7,18 @@ router.get('/', (req, res) => {
     console.log(req.session);
 
     post.findAll({
-      attributes: ['id','title','created_at','contents']
+      attributes: ['id','title','created_at','contents'],
+      include: [
+      {
+        model: user,
+        attributes: ['username']
+      }
+    ]
     })
       .then(dbPostData => {
         // pass a single post object into the homepage template
         const posts = dbPostData.map(post => post.get({ plain: true }));
-       // console.log(dbPostData[0]);
+        console.log(posts);
        res.render('homepage', {
         posts,
         loggedIn: req.session.loggedIn
